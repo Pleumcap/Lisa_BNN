@@ -1,0 +1,26 @@
+{% extends 'main.html' %}
+{% block body %}
+<!-- แสดงแค่ title กับ date -->
+<h1>การสกัดคำจากเอกสารที่ถูกสแกน</h1>
+<hr>
+{% for f in data %}
+    <h3>หมายเลขเอกสาร : {{f.id_doc}} <br> 
+        ชื่อเรื่อง : {{f.title}} <br> 
+        ส่งจาก : {{f.send}} <br> 
+        ผู้รับ : {{f.receiver}} <br> 
+        วันที่เขียน : {{f.date}}
+        
+        {% for i in img %}
+        {% if i.id == f.id_doc %}
+        <h3>
+            ลายเซ็นต์คนที่ : {{i.id_person}} <br>
+            ชื่อ : {{i.name}} <br>
+            ตำแหน่ง : {{i.roll}}
+         </h3>
+        <img src="data:image/jpeg;base64,{{ i.url }}" class="img-thumbnail">
+        {% endif %}
+        {% endfor %}
+    </h3>
+    <hr>    
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'main.html' %}
+{% block body %}
+    
+    {% for f in data %}
+    หมายเลขเอกสาร : {{f.id_doc}} <br> 
+        ชื่อเรื่อง : {{f.title}} <br> 
+        ส่งจาก : {{f.send}} <br> 
+        ผู้รับ : {{f.receiver}} <br> 
+        วันที่เขียน : {{f.date}} <br>
+        <hr>
+    {% endfor %}
+    
+{% endblock %}
