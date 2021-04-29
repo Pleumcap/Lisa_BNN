@@ -16,3 +16,6 @@ https://stackpython.medium.com/django-search-with-q-objects-tutorial-9c701db74e0
 //datepicker
 https://github.com/dangrossman/daterangepicker
 https://www.daterangepicker.com/
+
+//จากที่ให้ดูตัวอย่างตอนประชุม zoom เป็น datepicker form จากเว็บนี้ครับ
+https://formden.com/form-builder/
